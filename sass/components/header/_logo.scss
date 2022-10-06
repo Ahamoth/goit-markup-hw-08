@@ -1,0 +1,26 @@
+.logo__item {
+    font-family: "raleway", sans-sarif;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo-footer {
+    display: block;
+}
+
+.logo-blue {
+    color: var(--hover-font-color);
+}
+
+.logo-black {
+    color: var(--main-black);
+}
+
+.logo-white {
+    color: var(--main-white);
+}
+
+.logos {
+    margin-bottom: 20px;
+}
