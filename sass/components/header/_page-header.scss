@@ -52,7 +52,9 @@
          background-color: var(--main-white);
         padding: 48px 40px;
          &.is-open {
-             display: block;
+             display: flex;
+            flex-direction: column;
+                justify-content: space-between;
          }
      }
  }
@@ -62,5 +64,11 @@
          display: flex;
          width: 100%;
          align-items: center;
+         margin-left: 88px;
      }
  }
+ @media screen and (min-width: 1200px) {
+    .page-nav__conteiner {
+            margin-left: 93px;
+        }
+    }

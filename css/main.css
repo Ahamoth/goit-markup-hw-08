@@ -144,7 +144,16 @@ img {
     padding: 48px 40px;
   }
   .page-nav__conteiner.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
@@ -156,6 +165,12 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-nav__conteiner {
+    margin-left: 93px;
   }
 }
 .logo__item {
@@ -202,12 +217,12 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-left: 87px;
+    /*  margin-left: 87px; */
   }
 }
 @media screen and (min-width: 1200px) {
   .page-nav {
-    margin-left: 93px;
+    /* margin-left: 93px; */
   }
 }
 
@@ -285,13 +300,6 @@ img {
     margin-left: auto;
   }
 }
-@media screen and (max-width: 767.98px) {
-  .menu-bottom__auth {
-    position: absolute;
-    left: 40px;
-    bottom: 48px;
-  }
-}
 @media screen and (min-width: 768px) {
   .menu-bottom__auth {
     margin-left: auto;
@@ -363,6 +371,7 @@ img {
     margin-left: auto;
     font-size: 12px;
     line-height: 1.1666666667;
+    margin-bottom: 10px;
   }
   .auth-nav__link {
     display: -webkit-box;
@@ -371,11 +380,17 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
-@media screen and (max-width: 1199.98px) {
-  .auth-nav__item:first-child {
-    margin-bottom: 10px;
+@media screen and (min-width: 1200px) {
+  .auth-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .auth-nav__item {
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -425,6 +440,12 @@ img {
   .social-nav {
     display: none;
   }
+}
+
+.social-nav__link::after {
+  content: "";
+  margin-left: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .hero {
